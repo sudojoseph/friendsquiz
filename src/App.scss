@@ -1,0 +1,182 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+$background-color: #b5ceff;
+$main-color: #000;
+
+//global rules
+
+h1 {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+//Import fontface
+
+@mixin font($fontName, $fontSrc) {
+  font-family: $fontName;
+  src: $fontSrc
+}
+
+@font-face {
+  @include font(friendsFont,url(fonts/friendsFont.TTF))
+}
+
+@font-face {
+  @include font(lato-light,url(fonts/Lato-Light.ttf))
+}
+
+@font-face {
+  @include font(lato,url(fonts/Lato-Regular.ttf))
+}
+
+.App {
+  background: $background-color;
+  display: block;
+  margin: 0;
+  @include size(100%, 100vh);
+
+  .header {
+    @include size(100%, 200px);
+    text-align: center;
+    color: $main-color;
+    background: $background-color;
+    font-family: friendsFont;
+
+    h1 {
+      font-size: 45px;
+      padding-top: 55px;
+    }
+  }
+
+  .status-bar {
+    display: block;
+    width: 600px;
+    margin: auto;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+
+    span {
+      height: 100%;
+      display: block;
+      background: #cfe3f4;
+      border-radius: 15px;
+      transition: all 1.75s;
+    }
+  }
+
+  .question-container {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 800px;
+    display: none;
+    margin:  25px auto 0;
+    background: #fff;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 0 20px 0px #606060;
+    font-family: lato-light;
+
+    &.show {
+      height: 250px;
+      padding: 44px 25px;
+      display: block;
+    }
+
+    &.final-score {
+      height: 367px;
+      margin-top: -15px;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      img {
+        margin-top: 15px;
+      }
+    }
+
+    h1 {
+      color: $main-color;
+      font-size: 25px;
+    }
+
+    ul {
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: lato;
+
+      li {
+        width: 40%;
+        background: #ffffff;
+        color: $background-color;
+        border: 2px $background-color solid;
+        font-weight: 800;
+        margin: 15px 25px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 12px;
+        transition: all 0.25s;
+
+        &:hover {
+          background: $background-color;
+          color: #ffffff;
+          border: 2px #ffffff solid;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .pop-up-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.88);
+
+    .pop-up {
+      text-align: center;
+      color: #ffffff;
+      margin-top: 13vh;
+
+      h1 {
+        margin: 20px;
+        font-size: 40px;
+        font-weight: 400;
+      }
+
+      button {
+        background: transparent;
+        border: #ffffff 2px solid;
+        color: #ffffff;
+        padding: 10px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 17px;
+        margin-top: 15px;
+        cursor: pointer;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+}
