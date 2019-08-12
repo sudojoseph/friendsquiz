@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/friendsquiz/static/css/main.2472e5fa.chunk.css",
+    "main.js": "/friendsquiz/static/js/main.1d60befd.chunk.js",
+    "main.js.map": "/friendsquiz/static/js/main.1d60befd.chunk.js.map",
+    "runtime~main.js": "/friendsquiz/static/js/runtime~main.d22d7e9b.js",
+    "runtime~main.js.map": "/friendsquiz/static/js/runtime~main.d22d7e9b.js.map",
+    "static/js/2.a68ccf2f.chunk.js": "/friendsquiz/static/js/2.a68ccf2f.chunk.js",
+    "static/js/2.a68ccf2f.chunk.js.map": "/friendsquiz/static/js/2.a68ccf2f.chunk.js.map",
+    "index.html": "/friendsquiz/index.html",
+    "precache-manifest.fd780227eb7a9b8b746218d6a2fd4100.js": "/friendsquiz/precache-manifest.fd780227eb7a9b8b746218d6a2fd4100.js",
+    "service-worker.js": "/friendsquiz/service-worker.js",
+    "static/css/main.2472e5fa.chunk.css.map": "/friendsquiz/static/css/main.2472e5fa.chunk.css.map",
+    "static/media/App.scss": "/friendsquiz/static/media/friendsFont.0a969adf.TTF",
+    "static/media/correct.gif": "/friendsquiz/static/media/correct.2473c908.gif",
+    "static/media/finish.gif": "/friendsquiz/static/media/finish.3e996486.gif",
+    "static/media/incorrect.gif": "/friendsquiz/static/media/incorrect.7290be31.gif"
+  }
+}
