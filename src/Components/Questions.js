@@ -79,7 +79,8 @@ class Questions extends Component  {
           <PopUp show={popUpShow}
           handleNextQuestion={this.handleNextQuestion}
           answerCorrect={answCorrect}
-          setStatusBar={this.handleStatusBar}/>
+          setStatusBar={this.handleStatusBar}
+          lastQuestion={(numberOfQuestions - 1) === questionShow}/>
         </div>
       );
     } else {

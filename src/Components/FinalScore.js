@@ -4,9 +4,10 @@ import Finish from '../img/finish.gif'
 const FinalScore = ({numberOfTries}) => {
   return(
     <div  className="question-container show final-score">
-      <h1>You did it!</h1>
+      <h1>It's done</h1>
       <img src={Finish} />
-      <h2>{`You did it in ${numberOfTries} ${numberOfTries > 1 ? 'tries' : 'try'}`}</h2>
+      <p>{`It only took you ${numberOfTries} ${numberOfTries > 1 ? 'tries' : 'try'}`}</p>
+      <p>We are so proud of you. Share your results on</p>
     </div>
   );
 }
