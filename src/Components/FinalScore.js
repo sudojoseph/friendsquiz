@@ -2,7 +2,7 @@ import React from 'react';
 import Finish from '../img/finish.gif'
 
 const FinalScore = ({numberOfTries}) => {
-  const url = process.env.PUBLIC_URL;
+  const url = window.location.href;
   return(
     <div  className="question-container show final-score">
       <h1>You did it. All the questions, front and back</h1>
