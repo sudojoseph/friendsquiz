@@ -7,16 +7,6 @@ let questionData = [{
     'Yellow'
   ],
   correctAnswer: 2
-},
-{
-  question: "What does Joe not share?",
-  answers: [
-    'Money',
-    'Beer',
-    'Women',
-    'Food'
-  ],
-  correctAnswer: 3
 }]
 
 export default questionData;

@@ -16,6 +16,21 @@ li {
   list-style: none;
 }
 
+//keyframes
+
+@keyframes pulse
+{
+     0% {
+        font-size: 17px;
+     }
+     75% {
+          font-size: 22px;
+     }
+     100% {
+          font-size: 17px;
+     }
+}
+
 //Import fontface
 
 @mixin font($fontName, $fontSrc) {
@@ -95,19 +110,36 @@ li {
     &.final-score {
       height: 367px;
       margin-top: -15px;
+      padding-top: 20px;
 
       h1 {
         font-size: 32px;
+        margin-bottom: 10px;
       }
 
       img {
-        margin-top: 15px;
+        margin: 15px;
       }
 
       p {
-        font-family: lato;
         font-size: 17px;
         font-weight: 700;
+        margin: 3px;
+        position: relative;
+
+        span {
+          animation: pulse 1s infinite;
+          cursor: pointer;
+          color: $background-color;
+
+          a {
+            text-decoration: none;
+
+            &:visited {
+              color: $background-color;
+            }
+          }
+        }
       }
     }
 
@@ -164,6 +196,10 @@ li {
         font-weight: 400;
       }
 
+      img {
+        width: 480px;
+      }
+
       button {
         background: transparent;
         border: #ffffff 2px solid;
@@ -183,6 +219,43 @@ li {
 
     &.hide {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .App {
+    .status-bar {
+      width: 95%;
+      margin: auto;
+    }
+
+    .question-container {
+      width: 100%;
+      height: auto!important;
+      padding: 20px 0 10px!important;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          width: 100%;
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pop-up {
+
+    h1 {
+      font-size: 28px!important;
+    }
+
+    img {
+      width: 95%!important;
     }
   }
 }

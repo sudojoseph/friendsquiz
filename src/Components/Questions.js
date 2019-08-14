@@ -4,6 +4,7 @@ import StatusBar from './StatusBar';
 import QuestionData from './questionData';
 import PopUp from './PopUp';
 import FinalScore from './FinalScore';
+import {correctImagesArr, incorrectImagesArr} from './Images';
 
 class Questions extends Component  {
 
@@ -15,7 +16,10 @@ class Questions extends Component  {
     answCorrect: false,
     statusBar: 0,
     numberOfTries: 1,
-    numberOfQuestions: QuestionData.length
+    numberOfQuestions: QuestionData.length,
+    correctImageCount: 0,
+    incorrectImageCount: 0,
+    imageUrl: ''
   }
 
   checkAnswer = (index, answer) => {
@@ -23,12 +27,26 @@ class Questions extends Component  {
       this.setState(prevState => ({
         totalScore: prevState.totalScore += 1,
         answCorrect: true
-      }));
+      }), () => this.handlePopUpImg());
     } else {
-      this.setState({answCorrect: false});
+      this.setState({answCorrect: false}, () => this.handlePopUpImg());
 
     }
     this.setState({popUpShow: true});
+  }
+
+  handlePopUpImg = () => {
+    let correct = this.state.answCorrect
+    let arr = correct ? correctImagesArr : incorrectImagesArr;
+    let number = correct ? this.state.correctImageCount : this.state.incorrectImageCount;
+
+    this.setState(prevState => (
+      correct ? {correctImageCount: prevState.correctImageCount + 1} : {incorrectImageCount: prevState.incorrectImageCount + 1}
+    ), () => this.setState({imageUrl: arr[number]}));
+
+    if ((number + 1) === arr.length) {
+      this.setState(correct ? {correctImageCount: 0} : {incorrectImageCount: 0})
+    }
   }
 
   handleNextQuestion = () => {
@@ -55,13 +73,16 @@ class Questions extends Component  {
 
   render() {
 
+    console.log(this.state.imageUrl);
+
     const {questionData,
       questionShow,
       popUpShow,
       answCorrect,
       statusBar,
       numberOfQuestions,
-      numberOfTries} = this.state;
+      numberOfTries,
+      imageUrl} = this.state;
 
     if (numberOfQuestions !== questionShow) {
       return(
@@ -80,7 +101,8 @@ class Questions extends Component  {
           handleNextQuestion={this.handleNextQuestion}
           answerCorrect={answCorrect}
           setStatusBar={this.handleStatusBar}
-          lastQuestion={(numberOfQuestions - 1) === questionShow}/>
+          lastQuestion={(numberOfQuestions - 1) === questionShow}
+          img={imageUrl}/>
         </div>
       );
     } else {

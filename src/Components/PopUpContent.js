@@ -1,20 +1,19 @@
 import React from 'react';
-import Incorrect from '../img/incorrect.gif';
-import Correct from '../img/correct.gif';
 
-const PopUpContent = ({answerCorrect}) => {
+const PopUpContent = ({answerCorrect, img}) => {
+
   if (answerCorrect) {
     return(
       <div>
         <h1>Could you BE anymore right?</h1>
-        <img src={Correct} />
+        <img src={img} alt=""/>
       </div>
     );
   } else {
     return(
       <div>
-        <h1>Not Correct</h1>
-        <img src={Incorrect} />
+        <h1>You are absolutly wrong!</h1>
+        <img src={img} alt=""/>
       </div>
     );
   }
