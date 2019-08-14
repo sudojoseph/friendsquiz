@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/friendsquiz/static/css/main.900f95bc.chunk.css",
-    "main.js": "/friendsquiz/static/js/main.71b2c6ec.chunk.js",
-    "main.js.map": "/friendsquiz/static/js/main.71b2c6ec.chunk.js.map",
+    "main.js": "/friendsquiz/static/js/main.fe278544.chunk.js",
+    "main.js.map": "/friendsquiz/static/js/main.fe278544.chunk.js.map",
     "runtime~main.js": "/friendsquiz/static/js/runtime~main.d22d7e9b.js",
     "runtime~main.js.map": "/friendsquiz/static/js/runtime~main.d22d7e9b.js.map",
     "static/js/2.a246c191.chunk.js": "/friendsquiz/static/js/2.a246c191.chunk.js",
     "static/js/2.a246c191.chunk.js.map": "/friendsquiz/static/js/2.a246c191.chunk.js.map",
     "index.html": "/friendsquiz/index.html",
-    "precache-manifest.11b741dab3a7deb35ec7c5fcaaae7de9.js": "/friendsquiz/precache-manifest.11b741dab3a7deb35ec7c5fcaaae7de9.js",
+    "precache-manifest.2f181177e9bb26b4129f2d6e5693b5da.js": "/friendsquiz/precache-manifest.2f181177e9bb26b4129f2d6e5693b5da.js",
     "service-worker.js": "/friendsquiz/service-worker.js",
     "static/css/main.900f95bc.chunk.css.map": "/friendsquiz/static/css/main.900f95bc.chunk.css.map",
     "static/media/App.scss": "/friendsquiz/static/media/friendsFont.0a969adf.TTF",
